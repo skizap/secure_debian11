@@ -1,0 +1,56 @@
+# HOW TO RUN THE SECURE_DEBIAN11.SH SCRIPT
+
+1. Install dos2unix
+   ----------------
+   Sometimes your script might include Windows-style carriage returns (\r),
+   which can cause errors. To remove these, install dos2unix:
+
+       sudo apt-get update
+       sudo apt-get install -y dos2unix
+
+2. Convert the Script to Unix Format
+   ----------------------------------
+   Use dos2unix on the script to ensure it has the correct line endings:
+
+       dos2unix secure_debian11.sh
+
+3. Make the Script Executable
+   ---------------------------
+   Change the script permissions to make it executable:
+
+       chmod +x secure_debian11.sh
+
+4. Run the Script with Bash
+   -------------------------
+   Since the script uses 'set -euo pipefail' and other Bash-specific features,
+   you must run it with Bash:
+
+       sudo bash secure_debian11.sh
+
+   Make sure you are root or have sudo privileges when running the script.
+
+5. Verify the Process
+   -------------------
+   The script should:
+     - Update and upgrade your system
+     - Enable unattended upgrades
+     - Create a new sudo user
+     - Install and configure UFW
+     - Install and configure Fail2Ban
+     - Create a 6GB swap file
+     - Install and configure ClamAV
+     - Provide final notes about system maintenance
+
+6. Troubleshooting
+   ---------------
+   - If you still see errors like '$\r: command not found':
+        - Make sure you've run 'dos2unix secure_debian11.sh'.
+        - Open the script with 'nano' or 'vi' and confirm file format is "Unix (LF)".
+   - If you see 'Please run this script as root':
+        - Use 'sudo su' or run 'sudo bash secure_debian11.sh'.
+
+7. Enjoy Your Hardened Debian System!
+   -----------------------------------
+   After running this script, your Debian 11 system should be more secure,
+   with a basic firewall (UFW), Fail2Ban, automatic updates, and a malware
+   scanner installed.

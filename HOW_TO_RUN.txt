@@ -1,5 +1,5 @@
-# HOW TO RUN THE SECURE_DEBIAN11.SH SCRIPT
-
+# HOW TO RUN THE secure_debian11_v2.sh SCRIPT
+# This is in case you tried to edit the script and messed something up!!!! 
 1. Install dos2unix
    ----------------
    Sometimes your script might include Windows-style carriage returns (\r),
@@ -12,20 +12,20 @@
    ----------------------------------
    Use dos2unix on the script to ensure it has the correct line endings:
 
-       dos2unix secure_debian11.sh
+       dos2unix secure_debian11_v2.sh
 
 3. Make the Script Executable
    ---------------------------
    Change the script permissions to make it executable:
 
-       chmod +x secure_debian11.sh
+       chmod +x secure_debian11_v2.sh
 
 4. Run the Script with Bash
    -------------------------
    Since the script uses 'set -euo pipefail' and other Bash-specific features,
    you must run it with Bash:
 
-       sudo bash secure_debian11.sh
+       sudo bash secure_debian11_v2.sh
 
    Make sure you are root or have sudo privileges when running the script.
 

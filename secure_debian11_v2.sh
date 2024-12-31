@@ -1,7 +1,7 @@
 #!/usr/bin/env bash 
 #
 # secure_debian11.sh
-#
+# MADE BY skizap github 
 # A Bash script to secure a fresh Debian 11 installation on a VPS.
 # Features:
 # - Enhanced terminal visuals with colors and ASCII art.

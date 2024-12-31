@@ -8,7 +8,7 @@
 # - Robust error handling with detailed error logs.
 # - Detects previous runs and skips unnecessary steps.
 # - Interactive GUI for firewall configuration with multiple selection options.
-#
+# - make sure you change the USERNAMEHERE on line 167 this is important and make sure its all lowercase!!!! 
 
 # Exit on any error and treat unset variables as errors
 set -euo pipefail
